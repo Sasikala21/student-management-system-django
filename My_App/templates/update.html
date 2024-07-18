@@ -1,0 +1,170 @@
+<html>
+<head>
+    <style>
+        table,th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        .container {
+            padding: 15px;
+            background-color: hsl(196, 50%, 84%);
+            size: 30;
+            margin: 10px;
+            align-content: center;
+        }
+        body {
+            background-color: rgb(229, 239, 240);
+            text-align: center;
+            padding: 80px;
+            margin: 20px;
+            font-size: 20px;
+        }
+        input[type=text],
+        input[type=integer] {
+            width: 50%;
+            margin: 8px 0;
+            padding: 12px 20px;
+            display: inline-block;
+            border: 2px solid green;
+            box-sizing: border-box;
+        }
+        .button{
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 17px;
+            background-color: lightsalmon;
+        }
+        
+    </style>
+</head>
+<body>
+    <h2>Update Details</h2>
+    <form action="" method="POST" autocomplete = "off"> 
+        {% csrf_token %}
+    <div class="container">
+  
+        <label>Enter Name</label><input type=text name="name" style="margin: 15px;"
+            value={{stud.name}} name="name"><br>
+
+        <label>Enter Standard</label> <input type=integer name="standard" style="margin:15px;"
+            value={{stud.standard}} name="standard"><br>
+
+
+        <label>Enter City</label> <input type=text name="city" style="margin: 15px;"
+            value={{stud.city}} name="city"><br>
+            
+        <label>Enter PhoneNo</label> <input type=integer name="phoneno" style="margin: 15px;"
+            value={{stud.phoneno}} name="phoneno"><br>
+    
+             <a href=""> <button type="submit" value="update">Update</button> </a>
+
+    </div>
+
+</form>
+</body>
+</html>
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Update </title>
+</head>
+<style>
+    body{
+        margin:40%;
+    }
+</style>
+<body>
+    <h2>Update Details</h2>
+    <form action="" method="POST" autocomplete = "off"> 
+        {% csrf_token %}
+    <div class="container">
+  
+        <label>Enter Name</label><input type=text name="name" style="margin: 15px;"
+            value={{stud.name}} name="name"><br>
+
+        <label>Enter Standard</label> <input type=integer name="standard" style="margin:15px;"
+            value={{stud.standard}} name="standard"><br>
+
+
+        <label>Enter City</label> <input type=text name="city" style="margin: 15px;"
+            value={{stud.city}} name="city"><br>
+            
+        <label>Enter PhoneNo</label> <input type=integer name="phoneno" style="margin: 15px;"
+            value={{stud.phoneno}} name="phoneno"><br>
+    
+             <a href="/index"> <button type="submit" value="update">Update</button> </a>
+
+    </div>
+
+</form>
+</body>
+</html> -->
+<!-- 
+<html>
+<head>
+    <style>
+        table,th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        .container {
+            padding: 25px;
+            size: 30;
+            margin: 25px;
+        }
+        body {
+            background-color: powderblue;
+            text-align: center;
+            border: 20px solid powderblue;
+            padding: 200px;
+            margin: 30px;
+            font-size: 20px;
+            position:center;
+        }
+        input[type=text],
+        input[type=password],
+        input[type=integer] {
+            width: 50%;
+            margin: 4px 10px;
+            padding: 12px 20px;
+            display: inline-block;
+            border: 2px solid green;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <h2>Update Details</h2>
+        <form action="update/{{stud.roll_num}}" method="POST" autocomplete = "off"> 
+            {% csrf_token %}
+        <div class="container">
+      
+            <label>Enter Name</label><input type=text name="name" style="margin: 15px;"
+                value={{stud.name}} name="name"><br>
+
+
+            <label>Enter Standard</label> <input type=integer name="standard" style="margin:15px;"
+                value={{stud.standard}} name="standard"><br>
+
+
+            <label>Enter City</label> <input type=text name="city" style="margin: 15px;"
+                value={{stud.city}} name="city"><br>
+                
+            <label>Enter PhoneNo</label> <input type=integer name="phoneno" style="margin: 15px;"
+                value={{stud.phoneno}} name="phoneno"><br>
+        
+                 <a href="/index"> <button type="submit" value="update">Update</button> </a>
+
+        </div>
+
+    </form>
+    </body>
+
+</html> -->
